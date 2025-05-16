@@ -1,0 +1,20 @@
+dataset: Reuters
+
+encoder_dim:
+  - [ 10, 1024, 1024, 1024, 128 ]
+  - [ 10, 1024, 1024, 1024, 128 ]
+
+n_classes: 6
+n_samples: 18758
+batch_size: 1024
+momentum: 0.98
+temperature: 0.5
+alpha: 1
+beta: 1
+#lr: 1.0e-4
+blr: 5.0e-4
+min_blr: 5.0e-4
+weight_decay: 0
+data_path: data/
+output_dir: RELIABLE/
+seed: 1

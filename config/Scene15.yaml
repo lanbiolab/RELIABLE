@@ -1,0 +1,20 @@
+dataset: Scene15
+
+encoder_dim:
+  - [ 20, 1024, 1024, 1024, 128 ]
+  - [ 59, 1024, 1024, 1024, 128 ]
+
+n_classes: 15
+n_samples: 4485
+batch_size: 1024
+temperature: 0.9
+alpha: 1
+beta: 1
+blr: 5.0e-5
+weight_decay: 0
+#missing_rate: 0.3
+data_path: data/
+output_dir: RELIABLE/
+seed: 1
+train_time: 5
+accelerate: 'yes'
