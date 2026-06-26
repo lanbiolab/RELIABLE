@@ -25,7 +25,6 @@ def train_one_epoch(model: torch.nn.Module,
     total_loss = 0
     # 热身环节不进行互补性计算
     if epoch >= args.start_rectify_epoch:
-        # 添加伪样本模块
         commonZ_list = []
         data_loader = enumerate(data_loader_train_all)
         for data_iter_step, (ids, samples, mask, data_label) in data_loader:
