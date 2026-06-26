@@ -96,7 +96,7 @@ class RELIABLE(nn.Module):
         G = torch.exp(-G / temperature)
         G = G / G.sum(dim=1, keepdim=True)
         alpha = 0.5
-        G = torch.eye(G.shape[0]).cuda() * alpha + G * (1 - alpha)  # 将单位矩阵（自连接）与亲和力矩阵 G 进行加权融合, 通过自连接和邻居信息的平衡，确保在高阶游走过程中，不会完全丧失当前样本自身的信息。
+        G = torch.eye(G.shape[0]).cuda() * alpha + G * (1 - alpha) 
         return G
 
     @torch.no_grad()
