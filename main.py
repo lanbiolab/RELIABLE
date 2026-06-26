@@ -75,9 +75,8 @@ def get_args_parser():
                         help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
     parser.add_argument('--no_pin_mem', action='store_false', dest='pin_mem')
 
-    # 新加入的用于计算互补性损失函数的超参数
-    parser.add_argument("--k", default=5, type=int)
     # 互补性损失函数超参数
+    parser.add_argument("--k", default=5, type=int)
     parser.add_argument("--alpha", default=1, type=float)
     parser.add_argument("--beta", default=1, type=float)
     parser.add_argument("--calculate_W_every_epoch", default=False, type=bool)
